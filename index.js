@@ -15,13 +15,13 @@ app.use(express.static(frontendPath));
 
 // app.use(cors());
 app.use(cors({
-    origin: 'https://cafe-management-system.onrender.com', // Specify the allowed origin
+    origin: 'https://cafe-management-system-backend.onrender.com', // Specify the allowed origin
     methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'], // Specify the allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
   }));
 
   app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://cafe-management-system.onrender.com');
+    res.setHeader('Access-Control-Allow-Origin', 'https://cafe-management-system-backend.onrender.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.set('Referrer-Policy', 'strict-origin-when-cross-origin');
